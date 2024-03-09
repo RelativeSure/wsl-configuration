@@ -1,12 +1,8 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
-local mux = wezterm.mux
 local act = wezterm.action
 local launch_menu = {}
 local mouse_bindings = {}
-
--- This will hold the configuration.
--- local config = wezterm.config_builder()
 
 -- The filled in variant of the < symbol
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
@@ -44,11 +40,6 @@ table.insert(launch_menu, {
   label = 'Pwsh',
   args = { 'pwsh.exe', '-NoLogo' },
 })
--- table.insert(launch_menu, {
---   label = 'WSL Debian',
---   args = { 'wsl.exe', '-d', 'Debian' },
---   cwd = "\\\\wsl.localhost\\Debian\\home\\rasmus"
--- })
 
 return {
   default_domain = 'WSL:Debian',
@@ -58,16 +49,16 @@ return {
   font = wezterm.font 'MesloLGS NF',
   scrollback_lines = 7000,
   font_size = 16.0,
+  command_palette_font_size = 16.0,
   initial_cols = 120,
   initial_rows = 36,
   max_fps = 144,
   prefer_to_spawn_tabs = true,
   launch_menu = launch_menu,
-  -- show_update_window = true,
   color_scheme = 'tokyonight_night',
   front_end = 'WebGpu',
   animation_fps = 144,
-  -- audible_bell = false,
+  audible_bell = 'Disabled',
   bypass_mouse_reporting_modifiers = 'ALT',
   custom_block_glyphs = false,
   enable_scroll_bar = true,
@@ -88,50 +79,36 @@ return {
     button_hover_fg = '#ffffff',
     button_hover_bg = '#3b3052',
   },
-  -- colors = {
-  --   tab_bar = {
-  --     -- The color of the inactive tab bar edge/divider
-  --     inactive_tab_edge = '#575757',
-  --   },
-  -- },
-  -- inactive_pane_hsb = {
-  --   saturation = 0.9,
-  --   brightness = 0.8,
-  -- },
-  -- tab_bar_style = {
-  --   active_tab_left = wezterm.format {
-  --     { Background = { Color = '#0b0022' } },
-  --     { Foreground = { Color = '#2b2042' } },
-  --     { Text = SOLID_LEFT_ARROW },
-  --   },
-  --   active_tab_right = wezterm.format {
-  --     { Background = { Color = '#0b0022' } },
-  --     { Foreground = { Color = '#2b2042' } },
-  --     { Text = SOLID_RIGHT_ARROW },
-  --   },
-  --   inactive_tab_left = wezterm.format {
-  --     { Background = { Color = '#0b0022' } },
-  --     { Foreground = { Color = '#1b1032' } },
-  --     { Text = SOLID_LEFT_ARROW },
-  --   },
-  --   inactive_tab_right = wezterm.format {
-  --     { Background = { Color = '#0b0022' } },
-  --     { Foreground = { Color = '#1b1032' } },
-  --     { Text = SOLID_RIGHT_ARROW },
-  --   },
-  -- }
+  colors = {
+    tab_bar = {
+      -- The color of the inactive tab bar edge/divider
+      inactive_tab_edge = '#575757',
+    },
+  },
+  inactive_pane_hsb = {
+    saturation = 0.9,
+    brightness = 0.8,
+  },
+  tab_bar_style = {
+    active_tab_left = wezterm.format {
+      { Background = { Color = '#0b0022' } },
+      { Foreground = { Color = '#2b2042' } },
+      { Text = SOLID_LEFT_ARROW },
+    },
+    active_tab_right = wezterm.format {
+      { Background = { Color = '#0b0022' } },
+      { Foreground = { Color = '#2b2042' } },
+      { Text = SOLID_RIGHT_ARROW },
+    },
+    inactive_tab_left = wezterm.format {
+      { Background = { Color = '#0b0022' } },
+      { Foreground = { Color = '#1b1032' } },
+      { Text = SOLID_LEFT_ARROW },
+    },
+    inactive_tab_right = wezterm.format {
+      { Background = { Color = '#0b0022' } },
+      { Foreground = { Color = '#1b1032' } },
+      { Text = SOLID_RIGHT_ARROW },
+    },
+  }
 }
-
--- if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
---   table.insert(launch_menu, {
---     label = 'PowerShell',
---     args = { 'powershell.exe', '-NoLogo' },
---   })
--- end
-
--- and finally, return the configuration to wezterm
--- return config
--- return {
---   config = config,
---   launch_menu = launch_menu,
--- }
