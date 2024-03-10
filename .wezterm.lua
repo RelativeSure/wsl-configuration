@@ -35,15 +35,17 @@ mouse_bindings = {
 table.insert(launch_menu, {
   label = 'PowerShell',
   args = { 'powershell.exe', '-NoLogo' },
+  domain = { DomainName = 'local' },
 })
 table.insert(launch_menu, {
   label = 'Pwsh',
   args = { 'pwsh.exe', '-NoLogo' },
+  domain = { DomainName = 'local' },
 })
 
 return {
   default_domain = 'WSL:Debian',
-  -- default_prog = { 'pwsh.exe', '-NoLogo' },
+  window_close_confirmation = 'NeverPrompt',
   exit_behavior = 'Hold',
   hide_tab_bar_if_only_one_tab = true,
   font = wezterm.font 'MesloLGS NF',
