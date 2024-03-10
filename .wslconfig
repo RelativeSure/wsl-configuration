@@ -1,0 +1,10 @@
+[wsl2]
+memory=24GB
+processors=12
+swap=0
+networkingMode=mirrored
+
+[experimental]
+autoMemoryReclaim=dropcache 
+sparseVhd=true
+hostAddressLoopback=true
