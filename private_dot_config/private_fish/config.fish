@@ -1,0 +1,24 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+end
+starship init fish | source
+
+# pnpm
+set -gx PNPM_HOME "/home/rasmus/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+fish_add_path /opt/nvim-linux64/bin
+fish_add_path $HOME/.npm-global/bin
+fish_add_path $HOME/.cargo/bin
+
+# Created by `pipx` on 2024-03-09 20:11:01
+set PATH $PATH /home/rasmus/.local/bin
+
+set VIRTUAL_ENV /home/rasmus/.venvs/lvim

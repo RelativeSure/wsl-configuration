@@ -1,0 +1,40 @@
+[user]
+  email = mail@rasmusj.dk
+  name = RelativeSure
+
+[core]
+  editor = lvim
+  excludesFile = '~/.gitignore'
+
+[fetch]
+  prune = true
+
+[alias]
+  empty = "git commit --allow-empty"
+  delete-local-merged = "!git fetch && git branch --merged | egrep -v 'master' | xargs git branch -d"
+
+[init]
+  defaultBranch = master
+
+[push]
+  autoSetupRemote = true
+
+[color]
+  ui = true
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = red
+
