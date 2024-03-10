@@ -1,0 +1,232 @@
+
+[aws]
+symbol = "  "
+disabled = true
+
+[buf]
+symbol = " "
+disabled = true
+
+[bun]
+format = "🍔 "
+
+[c]
+symbol = " "
+disabled = true
+
+[character]
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
+[conda]
+symbol = " "
+
+[crystal]
+symbol = " "
+disabled = true
+
+[cmd_duration]
+min_time = 500
+format = 'took [$duration](bold yellow)'
+
+[dart]
+symbol = " "
+disabled = true
+
+[directory]
+read_only = " 󰌾"
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+disabled = true
+
+[elm]
+symbol = " "
+disabled = true
+
+[fennel]
+symbol = " "
+disabled = true
+
+[fossil_branch]
+symbol = " "
+
+[git_branch]
+symbol = " "
+always_show_remote = true
+truncation_length = 4
+truncation_symbol = ''
+ignore_branches = ['master', 'main']
+
+[git_commit]
+tag_symbol = "🔖 "
+
+[git_metrics]
+disabled = false
+added_style = 'bold blue'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+[git_status]
+conflicted = '🏳'
+ahead = '🏎💨'
+behind = '😰'
+diverged = '😵'
+up_to_date = '✓'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = '👅'
+deleted = '🗑'
+
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+disabled = true
+
+[haskell]
+symbol = " "
+disabled = true
+
+[haxe]
+symbol = " "
+disabled = true
+
+[hg_branch]
+symbol = " "
+disabled = true
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+disabled = true
+
+[julia]
+symbol = " "
+disabled = true
+
+[kotlin]
+symbol = " "
+disabled = true
+
+[kubernetes]
+format = 'on [⛵ ($user on )($cluster in )$context \($namespace\)](dimmed green) '
+disabled = false
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+disabled = true
+
+[meson]
+symbol = "󰔷 "
+disabled = true
+
+[nim]
+symbol = "󰆥 "
+disabled = true
+
+[nix_shell]
+symbol = " "
+disabled = true
+
+[nodejs]
+symbol = " "
+
+[ocaml]
+symbol = " "
+disabled = true
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+disabled = true
+
+[pijul_channel]
+symbol = " "
+disabled = true
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+disabled = true
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+disabled = true
+
+[swift]
+symbol = " "
+disabled = true
+
+[zig]
+symbol = " "
+disabled = true
