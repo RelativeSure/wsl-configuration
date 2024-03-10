@@ -1,0 +1,4 @@
+nodejs_npm_global_packages:
+  - name: jslint
+
+nodejs_version: "21.x"
